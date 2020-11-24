@@ -1,0 +1,14 @@
+legend{
+    font-size: 0.8rem !important;
+}
+.table th, .table td{
+    border-top: none !important;
+}
+.form-control:disabled {
+    background-color: #f9f9f9 !important;
+    opacity: 1;
+    cursor: not-allowed !important;
+}
+.multiselect--disabled .multiselect__current, .multiselect--disabled .multiselect__select {
+    background: transparent !important;
+}
