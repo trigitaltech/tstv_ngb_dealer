@@ -499,26 +499,22 @@ export default {
           customer_phone: this.customers.number,
           custom_title:this.customers.displayName,
           payment_method: "ussd",
-          redirect_url:this.paymentPayload.redirect,
+          redirect_url:"",
           country: "NG",
           currency: "NGN",
           txref: txId, // Pass your UNIQUE TRANSACTION REFERENCE HERE.
           //integrity_hash: hashedValue, // pass the sha256 hashed value here.
           onclose: function() {},
-          // callback: function(response) {
-          //   var flwref = response.data.tx.flwRef;
-          //    var txref = response.data.tx.txRef;// collect flwRef returned and pass to a 					server page to complete status check.
-          // console.log("This is the response returned after a charge", response);
-          // if(response.data.tx.chargeResponseCode === '00' || response.data.tx.chargeResponseCode === '0') {
-            // debugger
-            // redirect to a success page https://tstvbilling.com:8877/ngbplatform/api/v1/revpay/orderlock/txref/flwref
-            //  this.redirect_url ="https://tstv.nextgenerationbilling.com/ngbplatform/api/v1/revpay/orderlock/"+txref+"/"+flwref  
-          //  this.paymentPayload.redirect="https://tstvbilling.com/ngbplatform/api/v1/revpay/orderlock?flwref&txref"
-        //  this.redirect_url,methods.POST
-          // } else {
-            // redirect to a failure page.
-          // }
-          // }
+          callback: function(response) {
+            var flwref = response.data.tx.flwRef;
+             var txref = response.data.tx.txRef;// collect flwRef returned and pass to a 					server page to complete status check.
+          console.log("This is the response returned after a charge", response);
+          if(response.data.tx.chargeResponseCode === '00' || response.data.tx.chargeResponseCode === '0') {
+         
+             this.redirect_url ="https://tstv.nextgenerationbilling.com/ngbplatform/api/v1/revpay/orderlock/"+txref+"/"+flwref  
+         
+          }
+          }
     
         });
       // });
