@@ -135,6 +135,7 @@ export default {
         { key: 'status', sortable: true },
       ],
       tableData: [],
+      plans:[],
       movieTableData: [],
       topUp: false,
       redem: false,
@@ -154,6 +155,9 @@ export default {
     },
     rows() {
       return this.tableData.length
+    },
+ rows1() {
+      return this.plans.length
     },
     // rows1() {
     //   return this.movieTableData.length
@@ -195,6 +199,7 @@ export default {
             result.data.id
           )
           this.customers = response.data
+          this.plans = response.data.orderData
           this.pwMovieList()
           this.show = true
           this.form = {
@@ -738,7 +743,7 @@ export default {
                         :fixed="fixed"
                         responsive="sm"
                         id="my-table"
-                        :items="customers.orderData"
+                        :items="plans"
                         :current-page="currentPage"
                         :per-page="perPage"
                         :filter="filter"
@@ -776,7 +781,17 @@ export default {
                             <feather type="x-circle" class="icon-xs mr-2"></feather>Cancel
                           </button>
                         </template>
+                        
                       </b-table>
+                        <div style="float: right">
+                      <b-pagination
+                        v-model="currentPage"
+                        :per-page="perPage"
+                        :total-rows="rows1"
+                        aria-controls="my-table"
+                        hide-goto-end-buttons
+                      ></b-pagination>
+                    </div>
                       <!-- <table class="table mb-0">
                           <thead>
                             <tr>
