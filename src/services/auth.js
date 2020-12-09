@@ -28,3 +28,6 @@ export const addplan = (id,payload) => serviceMaker(`/multipleorders/${id}`, met
  
 
 export const searchvoucher = (id) => serviceMaker(`/vouchers/verify?pinNumber=${id}`, methods.GET, api.NGB)
+
+export const voucherreport = (id) => serviceMaker(`/runreports/VoucherSearch?R_pinNo=${id}`, methods.GET, api.NGB)
+

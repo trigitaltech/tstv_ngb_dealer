@@ -227,6 +227,13 @@ const inviewRoutes = [
   meta: { authRequired: true },
   props: (route) => ({ user: store.state.auth.currentUser || {} }),
 },
+{
+  path: 'VoucherReport',
+  name: 'Voucher Search',
+  component: () => lazyLoadView(import('@views/pages/inview/voucherreport')),
+  meta: { authRequired: true },
+  props: (route) => ({ user: store.state.auth.currentUser || {} }),
+},
   ]
 
 }
