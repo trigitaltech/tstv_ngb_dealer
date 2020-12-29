@@ -752,7 +752,7 @@ export default {
                         :fields="columns"
                       >
                         <template v-slot:cell(startDate)="data">
-                          <div class="table-row">{{ getFormattedDate(data.item.startDate) }}</div>
+                          <div class="table-row">{{ getDate(data.item.startDate) }}</div>
                         </template>
                         <template v-slot:cell(endDate)="data">
                             <div class="table-row">{{ getDate(data.item.endDate) }}</div>

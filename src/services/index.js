@@ -11,7 +11,7 @@ export const NGB = axios.create({
   // baseURL: 'https://tstvbilling.com:8877/ngbplatform/api/v1/'
   // baseURL: 'https://tstvbilling.com/ngbplatform/api/v1/',
   baseURL: 'https://tstv.nextgenerationbilling.com/ngbplatform/api/v1/',
-  
+  // baseURL: 'https://demo.nextgenerationbilling.com/ngbplatform/api/v1/',
 })
 
 export const api = {
