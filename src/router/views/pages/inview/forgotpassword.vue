@@ -127,7 +127,7 @@ export default {
     },
   },
   async mounted() {
-     setAuthorizationHeader('QWRtaW46VHN0djIwMTkh')
+     setAuthorizationHeader('aW50ZWdyYXRpb246aW50ZWdyYXRpb24=')
     // console.log('mounted', this.username)
   },
   methods: {
@@ -143,7 +143,7 @@ export default {
     },
     async myFunction() {
       try {
-        setAuthorizationHeader('QWRtaW46VHN0djIwMTkh')
+        setAuthorizationHeader('aW50ZWdyYXRpb246aW50ZWdyYXRpb24=')
         NProgress.start()
         const result = await verifyusername(this.username)
         this.confirmemail = await this.protect_email(result.data.email)

@@ -279,7 +279,7 @@ export default {
     },
   },
   async mounted() {
-    setAuthorizationHeader('QWRtaW46VHN0djIwMTkh')
+    setAuthorizationHeader('aW50ZWdyYXRpb246aW50ZWdyYXRpb24=')
     this.totalRows = this.items.length
     // debugger
     console.log('mounted',this.$route.params)
@@ -322,7 +322,7 @@ export default {
     async myFunction() {
       if (this.query.length === 18) {
       try {
-        setAuthorizationHeader('QWRtaW46VHN0djIwMTkh')
+        setAuthorizationHeader('aW50ZWdyYXRpb246aW50ZWdyYXRpb24=')
         NProgress.start()
         const result = await searchCustomer(this.customerBy.key, this.query)
         this.clientId = result.data.id
