@@ -123,7 +123,7 @@ export default {
     },
   },
   async mounted() {
-     setAuthorizationHeader('ZGVhbGVyOmRlYWxlcg==')
+     setAuthorizationHeader('QWRtaW46VHN0djIwMTkh')
 
     // console.log('mounted', this.email)
   },
@@ -140,7 +140,7 @@ export default {
     },
     async myFunction() {
       try {
-        setAuthorizationHeader('ZGVhbGVyOmRlYWxlcg==')
+        setAuthorizationHeader('QWRtaW46VHN0djIwMTkh')
         NProgress.start()
         const result = await verifyemail(this.email)
         this.emailid = await this.protect_email(result.data.email)

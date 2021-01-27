@@ -66,6 +66,7 @@ export default {
          {label:'date_used',  key: '4', sortable: true },
           {label:'box_id', key: '5', sortable: true },
            {label:'STATUS', key: '6', sortable: true },
+           {label:'pin_value', key: '7', sortable: true },
       ],
     }
   },
